@@ -43,3 +43,6 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'wunderground'
+gem 'httparty'
+gem 'figaro'
