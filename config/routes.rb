@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'welcome/test'
+  root 'welcome#test'
 
   get 'welcome/index'
 
