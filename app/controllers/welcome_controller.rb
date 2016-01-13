@@ -7,6 +7,7 @@ class WelcomeController < ApplicationController
     @location = response['location']['city']
     @temp_f = response['current_observation']['temp_f']
     @temp_c = response['current_observation']['temp_c']  
+    @real_feel = response['current_observation']['feelslike_f']
   end
 
   def index
