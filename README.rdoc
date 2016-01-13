@@ -1,6 +1,6 @@
 == README
 
-This will be another fairly simple app that will use the weather underground app to tell one the weather conditions in their general area. 
+This will be another fairly simple app that will use the weather underground app to tell one the weather conditions in their general area. I guess you can see that this is another app for Mike's series of API apps! I hope to get this one up on the web as well and maybe my wife will constantly be using it since she is 'addicted' to the weather. 
 
 It has the following gems installed: 
 
