@@ -4,7 +4,7 @@ This will be another fairly simple app that will use the weather underground app
 
 It has the following gems installed: 
 
-wunderground, httparty, figaro
+wunderground, httparty, figaro, bootstrap
 
 
 

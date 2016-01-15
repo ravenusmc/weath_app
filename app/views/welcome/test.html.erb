@@ -1,6 +1,24 @@
-<p>Test Page</p>
+<div class="row">
+  <div class="col-md-6-md-offset-3">
+    <div class="well">
+      <h1>Welcome to <%= @location %></h1>
+      <div class="row">
+        <div class="col-md-7">
+          <p><em>What's the weather like?</em></p>
+          <p>
+            Temperature is: <%= @temp_f %>° F / <%= @temp_c %>° C
+          </p>
+          <p>
+            Fells like: <%= @real_feel %>° F
+          </p>
+        </div>
+        <div class="col-md-5">
+          <p>
+            <%= @weather_words %><%= image_tag @weather_icon %>
+          </p>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
 
-<p>Tempature is: <%= @temp_f %> at <%= @location %></p>
-<p>But the teperature feels like <%= @real_feel %></P>
-
-<p>Tempature is: <%= @temp_c %> at <%= @location %></p>
