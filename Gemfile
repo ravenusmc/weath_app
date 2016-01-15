@@ -46,3 +46,4 @@ end
 gem 'wunderground'
 gem 'httparty'
 gem 'figaro'
+gem 'bootstrap-sass', '~> 3.3.6'
