@@ -1,2 +1,23 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-1">
+    <div class="well">
+      <h1>Look up your Local Weather Forecast</h1>
+      <p>What's the weather like in your city?</p>
+      <!-- Start creation of form -->
+      <div>
+        <%= form_tag index_path do %>
+          <!-- back to the present page after submitting form -->
+          <%= text_field_tag :city, nil, placeholder: "City Name" %><br />
+          <%= select_tag :state, options_for_select(@states), :prompt => "Please Select" %><br />
+          <%= submit tag "Check Weather" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- We'll display the results here: --> 
+<div class="col-md-6 col-md-offset-3">
+  <div class="well">
+    <h1>Forecast for <%= @location %>:</h1>
+    <div class="row">
