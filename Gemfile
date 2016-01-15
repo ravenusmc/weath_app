@@ -47,3 +47,4 @@ gem 'wunderground'
 gem 'httparty'
 gem 'figaro'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem "font-awesome-rails"
