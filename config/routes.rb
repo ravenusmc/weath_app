@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   root 'welcome#test'
+  #The index page gets two routes:
+  #The get route for when we initially come to the page
+  get 'index' => 'welcome#index'
+  #And then a post route for when we come back to the index page after submitte the form
+  post 'index' => 'welcome#index'
 
-  get 'local' => 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
