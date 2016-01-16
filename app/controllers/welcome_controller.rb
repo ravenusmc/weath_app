@@ -15,18 +15,20 @@ class WelcomeController < ApplicationController
     @forecast_link = response['current_observation']['forecast_url']
     @real_feel = response['current_observation']['feelslike_f']
 
-    if @weather_words == "Partly Cloudy" || @weather_words == "Mostly Cloudy"
+    if @weather_words.downcase == "partly cloudy" || @weather_words.downcase == "mostly cloudy"
       @body_class = "partly-cloudy"
-    elsif @weather_words == "Cloudy" || @weather_words == "Scattered Clouds"
+    elsif @weather_words == "Cloudy" || @weather_words == "Scattered Clouds" || @weather_words == "Overcast"
       @body_class = "partly-cloudy" 
-    elsif @weather_words == "clear"
+    elsif @weather_words.downcase == "clear"
       @body_class = "sunny"
-    elsif @weather_words == "snow"
+    elsif @weather_words.downcase == "snow"
       @body_class = "snow"
     elsif @weather_words == "Rain"
       @body_class = "rain"
     elsif @weather_words == "Fog"
       @body_class = "fog"
+    elsif @weather_words == "Thunderstorms and Rain" || @weather_words == "Thunderstorms"
+      @body_class = "thunder"
     end 
   end
 
