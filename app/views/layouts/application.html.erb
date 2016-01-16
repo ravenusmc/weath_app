@@ -6,7 +6,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<% if @body_class != nil %>
+  <body class="<%= @body_class %>">
+<% else %>
+  <body>
+<% end %>
 
 <%= yield %>
 
