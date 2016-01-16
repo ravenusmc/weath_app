@@ -14,6 +14,10 @@ class WelcomeController < ApplicationController
     @weather_words = response['current_observation']['weather']
     @forecast_link = response['current_observation']['forecast_url']
     @real_feel = response['current_observation']['feelslike_f']
+
+    if @weather_words == "Mostly Cloudy"
+       @body_class = "partly-cloudy"
+    end 
   end
 
   def test

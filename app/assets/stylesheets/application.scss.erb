@@ -18,11 +18,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.center {
-  text-align: center;
+body {
+  background: blue;
 }
+
+
 
 .main {
   margin-top: 200px;
   width: 500px;
+}
+
+/* Changing background pictures */
+
+.partly-cloudy {
+  background: url(<%= asset_path 'cloudy.jpg' %>) no-repeat center center fixed;
+  background-size: cover;
 }
