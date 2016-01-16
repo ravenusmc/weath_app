@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'welcome#test'
+  get 'test' => 'welcome#test'
   #The index page gets two routes:
   #The get route for when we initially come to the page
   get 'index' => 'welcome#index'
