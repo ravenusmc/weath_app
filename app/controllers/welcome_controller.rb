@@ -8,13 +8,13 @@ class WelcomeController < ApplicationController
     #Here is the call to the API 
     response = HTTParty.get("http://api.wunderground.com/api/#{ENV['wunderground_api_key']}/geolookup/conditions/q/#{params[:state]}/#{params[:city]}.json")
     
-      @location = response['location']['city']
-      @temp_f = response['current_observation']['temp_f']
-      @temp_c = response['current_observation']['temp_c']
-      @weather_icon = response['current_observation']['icon_url']
-      @weather_words = response['current_observation']['weather'] 
-      @forecast_link = response['current_observation']['forecast_url']
-      @real_feel = response['current_observation']['feelslike_f']
+      @location = response['location'] ? response['location']['city'] : nil
+      @temp_f = response['current_observation'] ? response['current_observation']['temp_f'] : nil
+      @temp_c = response['current_observation'] ? response['current_observation']['temp_c'] : nil
+      @weather_icon = response['current_observation'] ? response['current_observation']['icon_url'] : nil
+      @weather_words = response['current_observation'] ? response['current_observation']['weather'] : nil
+      @forecast_link = response['current_observation'] ? response['current_observation']['forecast_url'] : nil
+      @real_feel = response['current_observation'] ? response['current_observation']['feelslike_f'] : nil 
 
       #This part of the code will change the background depending on what @weather_words is. 
       #Head over to the views/layouts/application.html.erb file to see more. 
