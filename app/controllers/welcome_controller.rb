@@ -1,10 +1,11 @@
 class WelcomeController < ApplicationController
 
   def index
-    #states will need to be defined
+    #states will need to be defined and then @states.sort will sort all of them on the form. 
     @states = %w(HI AK CA OR WA ID UT NV AZ NM CO WY MT ND SD NE KS OK TX LA AR MO IA MN WI IL IN MI OH KY TN MS AL GA FL SC NC VA WV DE MD PA NY NJ CT RI MA VT NH ME DC PR)
     @states.sort!
 
+    #Here is the call to the API 
     response = HTTParty.get("http://api.wunderground.com/api/#{ENV['wunderground_api_key']}/geolookup/conditions/q/#{params[:state]}/#{params[:city]}.json")
     
       @location = response['location']['city']
@@ -15,7 +16,9 @@ class WelcomeController < ApplicationController
       @forecast_link = response['current_observation']['forecast_url']
       @real_feel = response['current_observation']['feelslike_f']
 
-      if @weather_words == "partly cloudy" || @weather_words == "Mostly Cloudy"
+      #This part of the code will change the background depending on what @weather_words is. 
+      #Head over to the views/layouts/application.html.erb file to see more. 
+      if @weather_words == "Partly Cloudy" || @weather_words == "Mostly Cloudy"
         @body_class = "partly-cloudy"
       elsif @weather_words == "Cloudy" || @weather_words == "Scattered Clouds" || @weather_words == "Overcast"
         @body_class = "partly-cloudy" 
