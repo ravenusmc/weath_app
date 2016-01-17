@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   #The index page gets two routes:
   #The get route for when we initially come to the page
   get 'index' => 'welcome#index'
-  #And then a post route for when we come back to the index page after submitte the form
+  #And then a post route for when we come back to the index page after submit the form
   post 'index' => 'welcome#index'
 
 
