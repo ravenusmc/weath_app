@@ -11,22 +11,28 @@
           <%= select_tag :state, options_for_select(@states), :prompt => "Please Select" %><br />
           <%= submit_tag "Check Weather" %></p><br />
         <% end %>
+          <!-- We'll display the results here: --> 
+          <h1>Forecast for <%= @location %>:</h1>
+          <p><em>What's the weather like?</em></p>
+          <p>
+            Temperature is: <%= @temp_f %>° F / <%= @temp_c %>° C
+          </p>
+          <p>
+            Feels like: <%= @real_feel %>° F
+          </p>
+          <p>
+            <%= @weather_words %><%= image_tag @weather_icon %>
+          </p>
       </div>
     </div>
   </div>
 
 
-<!-- We'll display the results here: --> 
-    <h1>Forecast for <%= @location %>:</h1>
-        <p><em>What's the weather like?</em></p>
-        <p>
-          Temperature is: <%= @temp_f %>° F / <%= @temp_c %>° C
-        </p>
-        <p>
-          Feels like: <%= @real_feel %>° F
-        </p>
-          <p>
-            <%= @weather_words %><%= image_tag @weather_icon %>
-          </p>
+
+
+
+       
+
+
 
 
