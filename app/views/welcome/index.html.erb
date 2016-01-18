@@ -14,29 +14,19 @@
       </div>
     </div>
   </div>
-</div>
+
 
 <!-- We'll display the results here: --> 
-<div class="col-md-6 col-md-offset-3">
-  <div class="well">
     <h1>Forecast for <%= @location %>:</h1>
-    <div class="row">
-      <div class="col-md-7">
         <p><em>What's the weather like?</em></p>
         <p>
           Temperature is: <%= @temp_f %>° F / <%= @temp_c %>° C
         </p>
         <p>
           Feels like: <%= @real_feel %>° F
-          The words are <%= @weather_words %>
         </p>
-        </div>
-        <div class="col-md-5">
           <p>
             <%= @weather_words %><%= image_tag @weather_icon %>
           </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+
