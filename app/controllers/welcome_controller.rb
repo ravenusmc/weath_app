@@ -9,6 +9,7 @@ class WelcomeController < ApplicationController
     response = HTTParty.get("http://api.wunderground.com/api/#{ENV['wunderground_api_key']}/geolookup/conditions/q/#{params[:state]}/#{params[:city]}.json")
     
       @location = response['location'] ? response['location']['city'] : nil
+      @state = response['location'] ? response['location']['state'] : nil
       @temp_f = response['current_observation'] ? response['current_observation']['temp_f'] : nil
       @temp_c = response['current_observation'] ? response['current_observation']['temp_c'] : nil
       @weather_icon = response['current_observation'] ? response['current_observation']['icon_url'] : nil
