@@ -8,7 +8,7 @@
         <%= form_tag(index_path) do %></p>
           <!-- back to the present page after submitting form -->
           <p><%= text_field_tag :city, nil, placeholder: "City Name" %></p><br />
-          <%= select_tag :state, options_for_select(@states), :prompt => "Please Select" %><br />
+          <p><%= select_tag :state, options_for_select(@states), :prompt => "Please Select" %><p><br />
           <%= submit_tag "Check Weather" %></p><br />
         <% end %>
           <!-- We'll display the results here: --> 
