@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  get 'test' => 'welcome#test'
+  root 'home#home'
   #The index page gets two routes:
   #The get route for when we initially come to the page
   get 'index' => 'welcome#index'
   #And then a post route for when we come back to the index page after submit the form
   post 'index' => 'welcome#index'
+  #Below line was only for development purposes
+  get 'test' => 'welcome#test'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -27,7 +27,7 @@ class WelcomeController < ApplicationController
         @body_class = "partly-cloudy" 
       elsif @weather_words == "Clear"
         @body_class = "sunny"
-      elsif @weather_words == "snow"
+      elsif @weather_words == "Snow"
         @body_class = "snow"
       elsif @weather_words == "Rain"
         @body_class = "rain"
