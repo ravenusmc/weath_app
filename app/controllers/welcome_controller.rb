@@ -19,7 +19,9 @@ class WelcomeController < ApplicationController
 
       #This part of the code will change the background depending on what @weather_words is. 
       #Head over to the views/layouts/application.html.erb file to see more. 
-      if @weather_words == "Partly Cloudy" || @weather_words == "Mostly Cloudy"
+      if @weather_words == nil 
+        @body_class = "nothing"
+      elsif @weather_words == "Partly Cloudy" || @weather_words == "Mostly Cloudy"
         @body_class = "partly-cloudy"
       elsif @weather_words == "Cloudy" || @weather_words == "Scattered Clouds" || @weather_words == "Overcast"
         @body_class = "partly-cloudy" 
