@@ -9,11 +9,14 @@
     <h1 class="box-heading">How this site works</h1>
         <ol class="box-list">
           <li>Select "Check Weather" in the upper right hand corner</li>
-          <li>Type in your city name-DO NOT USE SPACES, instead use an underscore _ </li>
+          <li>Type in your city name-DO NOT USE SPACES, instead use an underscore _ thus San Diego is San_Diego</li>
           <li>Select your state</li>
           <li>Click the green "check weather button"</li>
           <li>That's it!</li>
         </ol>
+      <p class="button">
+        <%= link_to "Check Weather", index_path, class: "btn btn-primary" %>
+      </p>
   </div>
 </div>
 
