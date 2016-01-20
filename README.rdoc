@@ -6,5 +6,7 @@ It has the following gems installed:
 
 wunderground, httparty, figaro, bootstrap, Font-Awesome 
 
+I got the project posted at https://mike-weather.herokuapp.com/. However, when I type in a city and state nothing happens. I posted a message on Stack Overflow and will see what type of response I get. I will also be heading to a rails meet up soon so see what type of help I can get there! 
+
 
 
