@@ -12,7 +12,7 @@ Good news, I was able to solve my problem with help from Stack Over Flow. The pr
 
 The site will ask you to input your city/town then your state and then will tell you the weather at that location. Finally, if the city has a space in the name, such as San Diego. Enter the city as San_Diego. 
 
-I think that is it for this up! Happy it is up! 
+I think that is it for this app!
 
 
 
